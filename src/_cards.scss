@@ -1,0 +1,96 @@
+// ========================================================================
+//
+// Name:            Card
+// Description:     All cards breakpoint specific styles
+//
+// Classes:         `tbl-card-*`
+//
+// ========================================================================
+
+
+// Cards
+// ========================================================================
+
+div[class*="tbl-card-"] .tbl-body {
+  display: grid;
+  grid-column-gap: $tbl-card-column-gap;
+  grid-row-gap: $tbl-card-row-gap;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  & > div {
+    border: $tbl-card-border;
+    border-radius: $tbl-card-radius;
+    box-shadow: $tbl-card-shadow;
+    padding: 0 0 20px 0;
+  }
+}
+
+@each $name, $color in $colors {
+  .tbl-card-bg-#{$name} {
+    background-color: $color;
+  }
+}
+
+@media only screen and (min-width: breakpoints(s)) {
+
+  @for $i from 1 through 6 {
+    .tbl-card-#{$i}\@s {
+      .tbl-body {
+        grid-template-columns: repeat($i, 1fr);
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: breakpoints(m)) {
+
+  @for $i from 1 through 6 {
+    .tbl-card-#{$i}\@m {
+      .tbl-body {
+        grid-template-columns: repeat($i, 1fr);
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: breakpoints(l)) {
+
+  @for $i from 1 through 6 {
+    .tbl-card-#{$i}\@l {
+      .tbl-body {
+        grid-template-columns: repeat($i, 1fr);
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: breakpoints(xl)) {
+
+  @for $i from 1 through 6 {
+    .tbl-card-#{$i}\@xl {
+      .tbl-body {
+        grid-template-columns: repeat($i, 1fr);
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: breakpoints(xxl)) {
+
+  @for $i from 1 through 6 {
+    .tbl-card-#{$i}\@xxl {
+      .tbl-body {
+        grid-template-columns: repeat($i, 1fr);
+      }
+    }
+  }
+
+}

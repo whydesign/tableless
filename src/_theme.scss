@@ -1,0 +1,22 @@
+// ========================================================================
+// Theme
+// Description: Here you can style your own theme specific properties
+// ========================================================================
+
+
+// Theme Variables
+// ========================================================================
+
+$table-background: #ffffff;
+$table-shadow: 3px 3px 20px rgba(0,0,0,.3);
+$table-radius: 5px;
+
+
+// Theme Classes
+// ========================================================================
+
+.tbl-less {
+  background: $table-background;
+  box-shadow: $table-shadow;
+  border-radius: $table-radius;
+}

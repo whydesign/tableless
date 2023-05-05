@@ -1,0 +1,55 @@
+@use "sass:map";
+
+// Global Variables
+// ========================================================================
+
+$tbl-head-font-weight: 800;
+$tbl-font-color: #333333;
+$tbl-font-size: 0.75em;
+$tbl-border-style: 1px solid;
+$tbl-border-color: #B2B2B2;
+$tbl-img-width: 100px;
+
+$tbl-card-column-gap: 25px;
+$tbl-card-row-gap: 25px;
+$tbl-card-radius: 5px;
+$tbl-card-shadow: 0 2px 8px rgba(0,0,0,.08);
+$tbl-card-border: $tbl-border-style lighten($tbl-border-color, 20%);
+$tbl-card-padding: 0 0 20px 0;
+
+$tbl-button-font-size: 0.74em;
+$tbl-button-padding: 0 18px;
+$tbl-button-line-height: 28px;
+
+// Global Color Pallet
+// ========================================================================
+
+$colors: (
+  primary:    #3598DA,
+  secondary:  #353535,
+  alert:      #F0506E,
+  success:    #19d680,
+  default:    #a9a9a9,
+  light:      #ffffff,
+  dark:      #212121,
+);
+
+// Global Breakpoints
+// ========================================================================
+
+$breakpoints: (
+  s:    0px,
+  m:    640px,
+  l:    1024px,
+  xl:   1200px,
+  xxl:  1440px,
+);
+
+// Tableless SCSS Imports
+// ========================================================================
+
+@import "functions";
+@import "base";
+@import "cards";
+@import "table";
+@import "theme";

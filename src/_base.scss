@@ -1,0 +1,259 @@
+// ========================================================================
+//
+// Name:            Base
+// Description:     All Base styles for tableless.CSS
+//
+// Classes:         `tbl-less`
+//                  `tbl-head`
+//                  `tbl-body`
+//
+//                  `tbl-text-*`
+//
+// ========================================================================
+
+
+// Base Styles
+// ========================================================================
+
+.tbl-less {
+  padding: 15px;
+  color: $tbl-font-color;
+  font-size: $tbl-font-size;
+
+  .tbl-head {
+    font-weight: $tbl-head-font-weight;
+    display: none;
+    border-bottom: $tbl-border-style $tbl-border-color;
+
+    &>div {
+      padding: 10px 7px;
+    }
+  }
+
+  .tbl-body {
+
+    &>div {
+      border-bottom: $tbl-border-style lighten($tbl-border-color, 20%);
+
+      &>div {
+        padding: 9px 7px;
+
+        &:has([class*="tbl-button"]) {
+          padding: 4px 7px;
+          height: calc(100% - 8px);
+        }
+      }
+
+    }
+
+    .tbl-spacer {
+      display: block;
+
+      &:after {
+        content: '';
+        display: block;
+        border-bottom: $tbl-border-style $tbl-border-color;
+        width: 100%;
+        //margin: 10px 0;
+      }
+    }
+  }
+
+}
+
+// Text Align Styles
+// ========================================================================
+
+.tbl-text {
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-justify {
+    text-align: justify;
+  }
+}
+
+@media only screen and (min-width: breakpoints(s)) {
+
+  .tbl-text {
+    &-left\@s {
+      text-align: left;
+    }
+    &-center\@s {
+      text-align: center;
+    }
+    &-right\@s {
+      text-align: right;
+    }
+    &-justify\@s {
+      text-align: justify;
+    }
+  }
+
+}
+
+@media only screen and (min-width: breakpoints(m)) {
+
+  .tbl-text {
+    &-left\@m {
+      text-align: left;
+    }
+    &-center\@m {
+      text-align: center;
+    }
+    &-right\@m {
+      text-align: right;
+    }
+    &-justify\@m {
+      text-align: justify;
+    }
+  }
+
+}
+
+@media only screen and (min-width: breakpoints(l)) {
+
+  .tbl-text {
+    &-left\@l {
+      text-align: left;
+    }
+    &-center\@l {
+      text-align: center;
+    }
+    &-right\@l {
+      text-align: right;
+    }
+    &-justify\@l {
+      text-align: justify;
+    }
+  }
+
+}
+
+@media only screen and (min-width: breakpoints(xl)) {
+
+  .tbl-text {
+    &-left\@xl {
+      text-align: left;
+    }
+    &-center\@xl {
+      text-align: center;
+    }
+    &-right\@xl {
+      text-align: right;
+    }
+    &-justify\@xl {
+      text-align: justify;
+    }
+  }
+
+}
+
+@media only screen and (min-width: breakpoints(xxl)) {
+
+  .tbl-text {
+    &-left\@xxl {
+      text-align: left;
+    }
+    &-center\@xxl {
+      text-align: center;
+    }
+    &-right\@xxl {
+      text-align: right;
+    }
+    &-justify\@xxl {
+      text-align: justify;
+    }
+  }
+
+}
+
+// Button Styles
+// ========================================================================
+
+[class*="tbl-button"] {
+  background-color: color(light);
+  color: color(dark);
+  border: 1px solid color(default);
+  margin: 0;
+  -webkit-appearance: none;
+  border-radius: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: $tbl-button-padding;
+  vertical-align: middle;
+  line-height: $tbl-button-line-height;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: $tbl-button-font-size;
+  transition: 0.5s ease;
+  transition-property: background-color, border;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.tbl-button {
+
+  &-expand {
+    width: 100%;
+
+    &:hover {
+      border: 1px solid darken(color(default), 30%);
+    }
+  }
+
+  &:hover {
+    border: 1px solid darken(color(default), 30%);
+  }
+
+  &-primary {
+    background-color: color(primary);
+    color: color(light);
+    border: 1px solid transparent;
+
+    &:hover, &:focus {
+      background-color: darken(color(primary), 10%);
+    }
+  }
+
+  &-secondary {
+    background-color: color(secondary);
+    color: color(light);
+    border: 1px solid transparent;
+
+    &:hover, &:focus {
+      background-color: darken(color(secondary), 10%);
+    }
+  }
+
+  &-alert {
+    background-color: color(alert);
+    color: color(light);
+    border: 1px solid transparent;
+
+    &:hover, &:focus {
+      background-color: darken(color(alert), 10%);
+    }
+  }
+
+  &-success {
+    background-color: color(success);
+    color: color(light);
+    border: 1px solid transparent;
+
+    &:hover, &:focus {
+      background-color: darken(color(success), 10%);
+    }
+  }
+
+}

@@ -1,0 +1,15 @@
+
+// Breakpoint Map Function
+// ========================================================================
+
+@function breakpoints($size) {
+  @return map.get($breakpoints, $size);
+}
+
+
+// Color Map Function
+// ========================================================================
+
+@function color($color) {
+  @return map.get($colors, $color);
+}
